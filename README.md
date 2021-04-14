@@ -67,6 +67,20 @@ and open this in the browser:
 
 You should see a json rendering of the seed data.
 
+## Enable CORS
+In the config/initializers/cors.rb file, GET requests are enabled already. If there is a GET endpoint that has another name, it will need to be specified here:
+```
+Rails.application.config.middleware.insert_before 0, Rack::Cors do
+  allow do
+    origins '*'
+
+    resource '*',
+      headers: :any,
+      methods: [:get, :my_endpoint_with_a_special_name]
+  end
+end
+```
+
 ## Push To Heroku
 - `git add .`
 - `git commit -m 'push models to heroku'`
