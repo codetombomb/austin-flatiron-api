@@ -29,7 +29,7 @@ In seed.rb, create a new instace(s) of the model:
 ```
 Then run: 
 - `rails db:seed`
-- 
+
 <em>DONT FORGET TO DESTROY MODELS FOR FUTURE RESEEDING.</em>
 - `Model.destroy_all`
 
