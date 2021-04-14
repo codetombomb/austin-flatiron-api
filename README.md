@@ -17,7 +17,7 @@ Add a model or models to the app:
 - `rails db:migrate`
 
 ## Seed db
-In seed.rb, create a new instace of the model:
+In seed.rb, create a new instace(s) of the model:
 
 ```
 5.times {
@@ -29,6 +29,9 @@ In seed.rb, create a new instace of the model:
 ```
 Then run: 
 - `rails db:seed`
+- 
+<em>DONT FORGET TO DESTROY MODELS FOR FUTURE RESEEDING.</em>
+- `Model.destroy_all`
 
 Start a console session and test data.
 - `rails c`
